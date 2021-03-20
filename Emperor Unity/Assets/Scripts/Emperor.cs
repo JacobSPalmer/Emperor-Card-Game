@@ -9,8 +9,11 @@ public class Emperor : MonoBehaviour
     public GameObject cardPrefab;
 
     public GameObject wastePos;
+    public GameObject deckButton;
     public GameObject[] bottomPos;
     public GameObject[] topPos;
+
+    
 
     public static string[] deckN = new string[] {"1", "2"};
     public static string[] suits = new string[] {"C","D","H","S"};
@@ -20,7 +23,7 @@ public class Emperor : MonoBehaviour
     public List<string>[] foundations;
     public List<string> waste;
 
-
+    //These form the 10 tableau lists that are linked to the unity end to store the locations of the initial dealing of cards
     private List<string> tableau0 = new List<string>();
     private List<string> tableau1 = new List<string>();
     private List<string> tableau2 = new List<string>();
@@ -153,7 +156,10 @@ public class Emperor : MonoBehaviour
             newWasteCard.name = waste[waste.Count - 1];
             newWasteCard.GetComponent<Selectable>().faceUp = true;
             newWasteCard.GetComponent<Selectable>().inWaste = true;
+            if(deck.Count == 0)
+            {
+                deckButton.GetComponent<Renderer>().enabled = false;
+            }
         }
-
     }
 }

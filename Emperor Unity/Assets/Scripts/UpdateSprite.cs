@@ -43,6 +43,7 @@ public class UpdateSprite : MonoBehaviour
             spriteRenderer.sprite = cardBack;
         }
 
+        //TODO: Create an outline 
         if(userInput.selectedCard)
         {
             //TODO Remove from update and make this change happen only when card is clicked 
