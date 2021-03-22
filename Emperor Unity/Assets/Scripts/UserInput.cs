@@ -116,19 +116,15 @@ public class UserInput : MonoBehaviour
         print("Hit Waste");
     }
 
-    //checks the currently selected card to a second selected card to determine if the movement is a valid move given the Emperor rule parameters
     bool isValidMove(GameObject selected)
     {
         Selectable origin = selectedCard.GetComponent<Selectable>();
         Selectable destination = selected.GetComponent<Selectable>();
 
         //TODO add switch statements here in place of if statements
-
-        //if the destination card (newly selected card) is on the foundation pile, check to see if the card is the same suit as the origin card
-        //or if the origin card (the current 'blue' selected card) is an ace (rank value of 1)
         if(destination.onFoundation)
         {
-            if(origin.suit == destination.suit || (origin.rank == 1))
+            if(origin.suit == destination.suit || (origin.rank == 1 && destination.rank == null))
             {
                 if(origin.rank == destination.rank + 1)
                 {
@@ -140,12 +136,10 @@ public class UserInput : MonoBehaviour
                 return false;
             }
         }
-        //if the destination is in waste, always return false as you can never move a card to the waste pile (pile next to the deck)
         else if(destination.inWaste)
         {
             return false;
         }
-        //primary game rule for moving in tableau: if the destination card is of a different color and has a rank one higher than the origin card, then return true
         else
         {
             if(origin.rank == destination.rank - 1 && origin.color != destination.color)
@@ -167,29 +161,24 @@ public class UserInput : MonoBehaviour
 
         float yOffset = 0.3f;
 
-        //if the card is on the foundation or the card is a king, do not offset the card from the position object
         if(destination.onFoundation || (!destination.onFoundation && origin.rank == 13))
         {
             yOffset = 0;
         }
 
-        //move the origin card to the destination cards location and offset by .3f; add the origin card to the parent object of the destination card
         selectedCard.transform.position = new Vector3(newSelected.transform.position.x, newSelected.transform.position.y - yOffset, newSelected.transform.position.z - 0.02f);
-        //if the destination is a card, move to the cards parent
         if(destination.CompareTag("Card"))
         {
             selectedCard.transform.parent = newSelected.transform.parent;
         }
-        //if the destination is a position, make it a child of that position gameobject
         else{
             selectedCard.transform.parent = newSelected.transform;
         }
-        //if origin is in the waste pile, remove from the waste pile
+
         if(origin.inWaste)
         {
             emperor.waste.Remove(selectedCard.name);
         }
-        //if the origin is on the foundation, reset the object to have a rank - 1 (for bookkeeping)
         else if(origin.onFoundation)
         {
             emperor.topPos[origin.posRow].GetComponent<Selectable>().rank = origin.rank - 1;

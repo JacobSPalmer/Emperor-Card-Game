@@ -3096,7 +3096,6 @@ MonoBehaviour:
   cardPrefab: {fileID: 6172814334617791106, guid: c0ff3e4d5a2be654daca0cf925580661,
     type: 3}
   wastePos: {fileID: 70665424}
-  deckButton: {fileID: 1796099012}
   bottomPos:
   - {fileID: 1897873690}
   - {fileID: 2017970912}
@@ -3133,6 +3132,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1668211175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,6 +3214,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> parent of 6d7cca9 (add deck button disappear when deck is empty)
 --- !u!1 &1796099012
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3243,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796099012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -8.051131, y: 3.37, z: 0.25}
+=======
+  m_LocalPosition: {x: -8.051131, y: 3.3, z: 0.29492188}
+>>>>>>> parent of 6d7cca9 (add deck button disappear when deck is empty)
   m_LocalScale: {x: 0.24, y: 0.24, z: 0.8771129}
   m_Children: []
   m_Father: {fileID: 1947360951}
@@ -3523,7 +3529,6 @@ Transform:
   m_Children:
   - {fileID: 1796099013}
   - {fileID: 70665425}
-  - {fileID: 1668211176}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
