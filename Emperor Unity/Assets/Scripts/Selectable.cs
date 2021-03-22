@@ -54,6 +54,7 @@ public class Selectable : MonoBehaviour
         return this.faceUp;
     }
 
+    //method to convert the string name given to each card instance/prefab and convert the card rank into a int to better compare cards
     public int assignRank(string obj)
     {
         //TODO find a better "null" system that can troubleshoot if the switch cases don't function properly
