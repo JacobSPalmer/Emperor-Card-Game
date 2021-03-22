@@ -3133,6 +3133,7 @@ Transform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1668211175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,6 +3217,8 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 =======
 >>>>>>> parent of 6d7cca9 (add deck button disappear when deck is empty)
+=======
+>>>>>>> parent of 6d7cca9 (add deck button disappear when deck is empty)
 --- !u!1 &1796099012
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,7 +3247,11 @@ Transform:
   m_GameObject: {fileID: 1796099012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -8.051131, y: 3.37, z: 0.25}
+=======
+  m_LocalPosition: {x: -8.051131, y: 3.3, z: 0.29492188}
+>>>>>>> parent of 6d7cca9 (add deck button disappear when deck is empty)
 =======
   m_LocalPosition: {x: -8.051131, y: 3.3, z: 0.29492188}
 >>>>>>> parent of 6d7cca9 (add deck button disappear when deck is empty)
